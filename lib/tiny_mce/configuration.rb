@@ -77,7 +77,7 @@ module TinyMCE
 
       json_options = []
       @options.each_pair do |key, value|
-        raise TinyMCEInvalidOption.invalid_option(key) unless valid?(key)
+        # raise TinyMCEInvalidOption.invalid_option(key) unless valid?(key)
         json_options << "#{key} : " + case value
         when String, Symbol, Fixnum
           "'#{value.to_s}'"
