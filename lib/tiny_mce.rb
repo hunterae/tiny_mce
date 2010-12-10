@@ -60,10 +60,26 @@ module TinyMCE
       File.open(tiny_mce_yaml_filepath, 'w') do |f|
         f.puts '# Here you can specify default options for TinyMCE across all controllers'
         f.puts '#'
-        f.puts '# theme: advanced'
-        f.puts '# plugins:'
-        f.puts '#  - table'
-        f.puts '#  - fullscreen'
+        f.puts "theme: advanced"
+        f.puts "theme_advanced_buttons1: 'bold, italic, strikethrough, |, bullist, numlist, blockquote, |, justifyleft, justifycenter, justifyright, |, link, unlink, pagebreak, |, spellchecker, fullscreen, image, audio, video, document'"
+        f.puts "theme_advanced_buttons2: ''"
+        f.puts "theme_advanced_buttons3: ''"
+        f.puts "theme_advanced_resize_horizontal: false"
+        f.puts "theme_advanced_resizing: false"
+        f.puts "theme_advanced_statusbar_location: bottom"
+        f.puts "theme_advanced_toolbar_align: left"
+        f.puts "theme_advanced_toolbar_location: top"
+        f.puts "relative_urls: false"
+        f.puts "width: '100%'"
+        f.puts "plugins:"
+        f.puts " - fullscreen"
+        f.puts " - wordcount"
+        f.puts " - colorboxpopups"
+        f.puts " - addimage"
+        f.puts " - addaudio"
+        f.puts " - addvideo"
+        f.puts " - adddocument"
+        f.puts " - advlink"
       end
       puts "Written configuration example to #{tiny_mce_yaml_filepath}"
     end
