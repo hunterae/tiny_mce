@@ -91,7 +91,6 @@ module TinyMCE
           raise TinyMCEInvalidOptionType.invalid_type_of(value, :for => key)
         end
       end
-
       json_options.sort!
 
       @raw_options.compact!

@@ -16,7 +16,7 @@ module TinyMCE
       @tiny_mce_configurations.each do |configuration|
         configuration.add_options(options, raw_options)
         tinymce_js += "tinyMCE.init("
-        tinymce_js += configuration.to_json
+        tinymce_js += configuration.to_json        
         tinymce_js += ");"
       end
 

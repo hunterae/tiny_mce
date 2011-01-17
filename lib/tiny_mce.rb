@@ -71,6 +71,8 @@ module TinyMCE
         f.puts "theme_advanced_toolbar_location: top"
         f.puts "relative_urls: false"
         f.puts "width: '100%'"
+        f.puts "extended_valid_elements : 'script[charset|defer|language|src|type]'"
+        f.puts "paste_auto_cleanup_on_paste : false"
         f.puts "plugins:"
         f.puts " - fullscreen"
         f.puts " - wordcount"
@@ -80,6 +82,7 @@ module TinyMCE
         f.puts " - addvideo"
         f.puts " - adddocument"
         f.puts " - advlink"
+        f.puts " - spellchecker"
       end
       puts "Written configuration example to #{tiny_mce_yaml_filepath}"
     end
